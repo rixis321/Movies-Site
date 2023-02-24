@@ -1,6 +1,7 @@
-package dev.rixis.movies.movies;
+package dev.rixis.movies.movies.controller;
 
-import org.bson.types.ObjectId;
+import dev.rixis.movies.movies.service.MovieService;
+import dev.rixis.movies.movies.model.Movie;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +26,8 @@ public class MovieController {
         return new ResponseEntity<List<Movie>>(movieService.allMovies(),HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id){
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(id), HttpStatus.OK);
+    @GetMapping("/{imdbId}")
+    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId){
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 }

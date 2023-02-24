@@ -1,4 +1,4 @@
-package dev.rixis.movies.movies;
+package dev.rixis.movies.movies.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class Movie {
     @Id
     private ObjectId id;
     private String title;
-    private String imbId;
+    private String imdbId;
     private String releaseDate;
     private String trailerLink;
     private String poster;

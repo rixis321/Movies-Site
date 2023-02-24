@@ -1,7 +1,7 @@
-package dev.rixis.movies.movies;
+package dev.rixis.movies.movies.service;
 
-import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
+import dev.rixis.movies.movies.repository.MovieRepository;
+import dev.rixis.movies.movies.model.Movie;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class MovieService {
 
     }
 
-    public Optional<Movie> singleMovie(ObjectId id){
-        return movieRepository.findById(id);
+    public Optional<Movie> singleMovie(String imbId){
+        return movieRepository.findMovieByImdbId(imbId);
     }
 }
