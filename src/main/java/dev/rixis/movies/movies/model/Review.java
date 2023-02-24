@@ -1,4 +1,4 @@
-package dev.rixis.movies.movies;
+package dev.rixis.movies.movies.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +17,8 @@ public class Review {
     private ObjectId id;
 
     private String body;
+
+    public Review(String body) {
+        this.body = body;
+    }
 }
