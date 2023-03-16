@@ -3,6 +3,7 @@
 Simple website for learning purposes
 
 Used technologies:
+<br />
 -React
 <br />
 -Spring 
